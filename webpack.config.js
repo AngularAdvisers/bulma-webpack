@@ -44,8 +44,8 @@ module.exports = (env) => {
               loader: "file-loader",
               options: {
                 name: "[name].[ext]?[hash]",
-                outputPath: "images/",
-                publicPath: isProduction ? "../images/" : "",
+                outputPath: "img/",
+                publicPath: isProduction ? "../img/" : "",
               },
             },
           ],
@@ -96,7 +96,7 @@ module.exports = (env) => {
       new CopyWebpackPlugin([
         {
           from: "src/img",
-          to: "images/[path][name].[ext]",
+          to: "img/[path][name].[ext]",
         },
       ]),
     ],
